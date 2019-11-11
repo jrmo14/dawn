@@ -25,11 +25,12 @@ class Weather {
     });
 
     $('.weather p[weather]').innerHTML = `<i class="material-icons" ${color}>${icon}</i>`;
-    $('.weather p[temperature]').innerHTML = `${temperature}ºC`;
+    $('.weather p[temperature]').innerHTML = `${temperature}ºF`;
   }
 
   fetchWeather(callback) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.location}&units=metric&appid=50a34e070dd5c09a99554b57ab7ea7e2`)
+    var locKey = config.OPENWEATHER_KEY
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.location}&units=imperial&appid=`+locKey)
       .then(res  => res.json())
       .then(json => JSON.stringify(json))
       .then(json => JSON.parse(json))
