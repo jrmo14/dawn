@@ -4,7 +4,8 @@ const $  = (e) => document.querySelector(e),
 function engines () {
   return {
     g: ['https://google.com/search?q=', 'Google'],
-    i: ['https://ixquick.com/do/search?q=', 'Ixquick'],
+    gh: ['https://github.com/search?q=', 'Github'],
+    so: ['https://stackoverflow.com/search?q=', 'StackOverflow'],
     d: ['https://duckduckgo.com/html?q=', 'DuckDuckGo'],
     y: ['https://youtube.com/results?search_query=', 'Youtube'],
     w: ['https://en.wikipedia.org/w/index.php?search=', 'Wikipedia']
@@ -16,7 +17,7 @@ const { parse, stringify } = JSON;
 const nodes = (elem) =>
       Array.prototype.slice.call($(elem).children);
 
-var place = localStorage.place || 'new york';
+var place = localStorage.place || 'West Lafayette';
 
 $('.weather .edit').onclick = () =>
   $('.weather-config').classList.add('show');
