@@ -15,7 +15,7 @@ class Powerline {
       }
     };
 
-    setInterval(() => { $('.time').innerHTML = `${strftime('H')}<span>:${strftime('i')}</span>`; }, 1000);
+    setInterval(() => { $('.time').innerHTML = `${strftime('h:ip')}`; }, 1000);
   }
 
   activate(obj, item) {

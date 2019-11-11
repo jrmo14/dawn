@@ -36,7 +36,7 @@ const strftime = (format = 'c') => {
         y: date.getFullYear().pad(),
         Y: date.getFullYear(),
         H: date.getHours(),
-        h: date.getHours().pad(),
+        h: date.getHours() > 12 ? date.getHours() - 12 : date.getHours(),
         p: date.getHours() >= 12 ? 'PM' : 'AM',
         o: date.getDate().ord(),
         M: date.getMinutes(),
