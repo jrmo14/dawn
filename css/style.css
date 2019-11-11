@@ -1,30 +1,30 @@
 @charset "UTF-8";
 
 * {
-    margin:  0;
-    border:  0;
+    margin: 0;
+    border: 0;
     padding: 0;
     outline: 0;
 
-    list-style:      none;
+    list-style: none;
     text-decoration: none;
-    text-rendering:  optimizeLegibility;
+    text-rendering: optimizeLegibility;
 
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
     -webkit-font-smoothing: subpixel-antialiased;
-       -moz-font-smoothing: subpixel-antialiased;
-        -ms-font-smoothing: subpixel-antialiased;
-         -o-font-smoothing: subpixel-antialiased;
+    -moz-font-smoothing: subpixel-antialiased;
+    -ms-font-smoothing: subpixel-antialiased;
+    -o-font-smoothing: subpixel-antialiased;
 
     -webkit-user-select: none;
-      -webkit-user-drag: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-         -o-user-select: none;
-            user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 :root {
@@ -119,8 +119,13 @@ body {
     box-sizing: border-box;
 }
 
-.items item[done] { --state: var(--done); }
-.items item[undone] { --state: var(--undone); }
+.items item[done] {
+    --state: var(--done);
+}
+
+.items item[undone] {
+    --state: var(--undone);
+}
 
 .items item {
     position: relative;
@@ -345,8 +350,17 @@ body {
     padding: 6px 0;
 }
 
-#tabs ul li[active]:nth-child(2) ~ li:last-child { margin: 0 0 0 35px; }
-#tabs ul li[active]:nth-child(3) ~ li:last-child { margin: 0 0 0 70px; }
+#tabs ul li[active]:nth-child(2) ~ li:last-child {
+    margin: 0 0 0 35px;
+}
+
+#tabs ul li[active]:nth-child(3) ~ li:last-child {
+    margin: 0 0 0 70px;
+}
+
+#tabs ul li[active]:nth-child(4) ~ li:last-child {
+    margin: 0 0 0 105px;
+}
 
 #panels {
     overflow: hidden;
@@ -382,12 +396,26 @@ body {
     --flavour: #5b52e4;
 }
 
+#panels ul:nth-child(4),
+#tabs ul li[active]:nth-child(4) ~ li:last-child {
+    --flavour: #541A0E;
+}
+
 #panels ul .links {
     box-shadow: inset -1px 0 var(--flavour);
 }
 
-#panels ul:nth-child(2) { background: #fff url("../img/bg-2.gif") repeat center left fixed; }
-#panels ul:nth-child(3) { background: #fff url("../img/bg-3.gif") repeat center left fixed; }
+#panels ul:nth-child(2) {
+    background: #fff url("../img/bg-2.gif") repeat center left fixed;
+}
+
+#panels ul:nth-child(3) {
+    background: #fff url("../img/bg-3.gif") repeat center left fixed;
+}
+
+#panels ul:nth-child(4) {
+    background: #fff url("../img/bg-4.gif") repeat center left fixed;
+}
 
 #panels ul[active] {
     right: 0;
@@ -431,9 +459,13 @@ body {
     font-size: 21px !important;
 }
 
-#tabs i[sunny] { color: #fd6697; }
+#tabs i[sunny] {
+    color: #fd6697;
+}
 
-#tabs i[cloudy] { color: #88d8d8; }
+#tabs i[cloudy] {
+    color: #88d8d8;
+}
 
 #panels .links {
     right: 0;
@@ -444,7 +476,7 @@ body {
     flex-wrap: wrap;
 }
 
-#panels > ul:first-child .links a {
+#panels > ul .links a {
     color: #bfbfbf;
     text-decoration: none;
     font: 700 18px 'Roboto', sans-serif;
@@ -457,9 +489,11 @@ body {
     margin-bottom: .7em;
 }
 
-#panels > ul:first-child .links a:not(:last-child) { margin-right: .3em }
+#panels > ul .links a:not(:last-child) {
+    margin-right: .3em
+}
 
-#panels > ul:first-child .links a:hover {
+#panels > ul .links a:hover {
     transform: scale(1.2);
     box-shadow: 0 0 rgba(0, 0, 0, 0.25), 0 0 0 rgba(0, 0, 0, .5), 0 -4px 5px rgba(0, 0, 0, .1);
     color: #fff;
@@ -480,9 +514,10 @@ body {
     bottom: 0;
     top: 0;
     background: rgba(0, 0, 0, .4);
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
     letter-spacing: 1px;
     font: 100 30px 'Nunito', sans-serif;
+    font-weight: bold;
     text-align: center;
     flex-wrap: wrap;
     word-break: break-all;
@@ -490,13 +525,13 @@ body {
     mix-blend-mode: overlay;
 }
 
-#panels > ul:first-child .links li:not(:last-child) {
+#panels > ul .links li:not(:last-child) {
     box-shadow: 0 1px 0 rgba(255, 255, 255, .07);
     padding: 0 0 .5em 0;
     margin-bottom: 1.5em;
 }
 
-#panels > ul:first-child .links li h1 {
+#panels > ul .links li h1 {
     color: #383838;
     font-size: 22px;
     margin-bottom: .5em;
@@ -509,12 +544,6 @@ body {
     /* display: inline; */
 }
 
-#panels > ul:not(:first-child) li a {
-    color: grey;
-    font: 700 16px 'Roboto', sans-serif;
-    text-decoration: none;
-    letter-spacing: 1px;
-}
 
 #panels > ul:not(:first-child) li a:hover {
     color: #fff;
@@ -524,11 +553,6 @@ body {
     display: inline;
 }
 
-#panels > ul:not(:first-child) li a::before {
-    content: '> ';
-    font-weight: 400;
-    display: none;
-}
 
 .weather .edit {
     width: 100%;
