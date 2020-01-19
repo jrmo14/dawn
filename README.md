@@ -1,12 +1,11 @@
 # dawn
-A startpage called "dawn" (WIP)
+My fork of the start page [dawn](https://github.com/0-l/dawn)
 
-[**Live Preview**](https://0-l.github.io/dawn/?)
+In order to use you must create `js/config.js`
 
-### Keybindings
-
-- `Numrow/Numpad` switch tabs (this is for i3. You can change this in powerline.js)
-- `s` open search dialog
-
-### Preview
-![preview](https://i.imgur.com/6ImuuEH.png)
+The file should contain:
+```javascript
+var config = {
+  OPENWEATHER_KEY: '<your_key_here>'
+}
+```

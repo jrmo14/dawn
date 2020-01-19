@@ -3,6 +3,7 @@ const $  = (e) => document.querySelector(e),
 
 function engines () {
   return {
+    az: ['https://amazon.com/s?k=', 'Amazon'],
     g: ['https://google.com/search?q=', 'Google'],
     gh: ['https://github.com/search?q=', 'Github'],
     so: ['https://stackoverflow.com/search?q=', 'StackOverflow'],
